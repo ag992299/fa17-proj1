@@ -7,11 +7,25 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Make Pokemon
+
+# Pokemon.delete_all
+# Trainer.delete_all
+
+
 %w(Squirtle Charmander Bulbasaur Pikachu).each do |name|
   Pokemon.create name: name, level: rand(1..20)
 end
+
+
 
 # Make other trainers
 %w(Ash Gary Misty Brock).each do |name|
   Trainer.create name: name, email: name+"@pokeportal.com", password: 'password'
 end
+
+
+Pokemon.create!(name: "Anastasia", level: 5, trainer: nil)
+
+Pokemon.create!(name: "Chas", level: 2, trainer: nil)
+
+Pokemon.create!(name: "Sofia", level: 6, trainer: nil)
